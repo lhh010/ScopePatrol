@@ -9,15 +9,14 @@
   - 逐类给出 train/val 帧数、框数与 val 帧占比,并对空 split / 某类 val 无样本给出提示
     (与 04_validate 的验收口径呼应)。
 
-独立重算:
-    python3 -c "from utils import stats; stats.main()"
+用法:
+    python -c "from utils import stats; stats.main()"
 """
 from collections import defaultdict
 
-from utils.common import ROOT, load_config
+from utils.common import DATASETS, load_config
 
-DATASETS = ROOT / "datasets"
-SPLITS = ("train", "val")
+SPLITS = ("train", "val", "test")
 
 
 def scan_group(group_dir):

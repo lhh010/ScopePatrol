@@ -12,7 +12,7 @@ The core challenge is an extreme **scale gap within a single scene** — from ha
 |---|---|
 | `docs/` | Difficulty analysis & experiment design ([proposal-difficulties-and-design.md](docs/proposal-difficulties-and-design.md)) |
 | `cleansight-yolo/` | Dataset metadata: class definitions, splits policy, tagging criteria. **Images/labels are not stored here** — download from [ModelScope: cleansight-yolo](https://www.modelscope.cn/datasets/lhh010/cleansight-yolo) |
-| `pipeline/` | Self-contained training pipeline adapted from the Xiyuan `cleansight-yolo-pipeline` (pull → build → train → validate) |
+| `pipeline/` | Training & validation pipeline (train → validate), adapted from the Xiyuan `cleansight-yolo-pipeline` |
 
 ## Classes
 
