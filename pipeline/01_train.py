@@ -4,8 +4,8 @@
 设备自动选 CUDA / MPS(Apple) / CPU。超参在 config.yaml 的 train: 段。
 
 用法(在 pipeline/ 下执行):
-    python 03_train.py                 # 全部组
-    python 03_train.py group2_small    # 只训某组
+    python 01_train.py                 # 全部组
+    python 01_train.py group2_small    # 只训某组
 """
 import sys
 

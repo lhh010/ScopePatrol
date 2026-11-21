@@ -6,8 +6,8 @@
 需 torch + ultralytics —— 用本项目 .venv/bin/python(见 requirements.txt)。
 
 用法(在 pipeline/ 下执行):
-    <py> 04_validate.py                # 全部有权重的组
-    <py> 04_validate.py group2_small   # 只验某组
+    python 02_validate.py              # 全部有权重的组
+    python 02_validate.py group2_small # 只验某组
 """
 import sys
 
