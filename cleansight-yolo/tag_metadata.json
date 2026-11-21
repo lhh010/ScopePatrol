@@ -1,0 +1,560 @@
+{
+  "dataset": "cleansight-yolo",
+  "track": "test (benchmark 轨)",
+  "project": "yolo-test",
+  "version": "benchmark-det-v0.1",
+  "generated_at": "2026-08-02T13:30:23.428142",
+  "tag_criteria_doc": "docs/label-studio-pj/yolo-test-tag-criteria.md",
+  "tag_definitions": {
+    "viewpoint": {
+      "type": "单选 (clip级)",
+      "description": "机位——固定监控下每片必选的绝对属性",
+      "values": {
+        "cam1": "操作者左前方",
+        "cam2": "操作者右前方",
+        "cam3": "预留：未来更换拍摄场景"
+      }
+    },
+    "ec_tags": {
+      "type": "多选 (clip级)",
+      "description": "等价类标签——按 applicable 即打、含基线。几何类桶（尺度/客观遮挡/拥挤/截断）由 build 从框自动派生，不在此列",
+      "values": {
+        "normal_light": "光照/成像 — 正常光照（可勾可不勾，非强制基线）",
+        "dark": "光照/成像 — 整体偏暗，细节难辨",
+        "overexposed": "光照/成像 — 大面积过曝泛白",
+        "fast_blur": "清晰度 — 整体倾向为方向性拖影（仅几帧不算）",
+        "defocus": "清晰度 — 均匀发软/发虚（失焦）",
+        "glare_water": "表面/背景 — 水面反光炫目",
+        "cluttered_bg": "表面/背景 — 墙面悬挂 ≥2–3 器械（前景多不算）",
+        "similar_distractor": "干扰 — 颜色/形态相似物 + 身体重叠难辨",
+        "severe_occlusion": "目标可见性 — 手大面积挡住器械、影响识别（主观判断）",
+        "diff_scope_model": "来源多样性 — 异内镜型号（元信息，勿凭画面猜）",
+        "diff_operator": "来源多样性 — 异操作者（元信息，勿凭画面猜）"
+      }
+    }
+  },
+  "summary": {
+    "total_tasks": 41,
+    "task_ids": [
+      92,
+      93,
+      94,
+      95,
+      96,
+      97,
+      99,
+      100,
+      101,
+      102,
+      103,
+      104,
+      105,
+      106,
+      107,
+      108,
+      109,
+      110,
+      111,
+      112,
+      113,
+      114,
+      115,
+      116,
+      117,
+      118,
+      119,
+      120,
+      121,
+      122,
+      123,
+      124,
+      125,
+      126,
+      127,
+      128,
+      129,
+      130,
+      131,
+      132,
+      133
+    ],
+    "viewpoint_distribution": {
+      "cam1": 16,
+      "cam2": 25
+    },
+    "ec_tags_distribution": {
+      "normal_light": 35,
+      "fast_blur": 22,
+      "glare_water": 5,
+      "cluttered_bg": 16,
+      "similar_distractor": 4,
+      "defocus": 2,
+      "dark": 4
+    },
+    "missing_tags": [
+      "overexposed",
+      "severe_occlusion",
+      "diff_scope_model",
+      "diff_operator"
+    ]
+  },
+  "tasks": [
+    {
+      "task_id": 92,
+      "video": "e4c0cd1a-clip_1784768975797_1784769003425.mp4",
+      "viewpoint": "cam1",
+      "ec_tags": [
+        "cluttered_bg",
+        "fast_blur",
+        "glare_water",
+        "normal_light"
+      ],
+      "frames_count": 663,
+      "duration_sec": 27.63
+    },
+    {
+      "task_id": 93,
+      "video": "491ed97f-clip_1784769014484_1784769035755.mp4",
+      "viewpoint": "cam1",
+      "ec_tags": [
+        "cluttered_bg",
+        "fast_blur",
+        "normal_light"
+      ],
+      "frames_count": 511,
+      "duration_sec": 21.3
+    },
+    {
+      "task_id": 94,
+      "video": "f6e4771a-clip_1784769034376_1784769074718.mp4",
+      "viewpoint": "cam1",
+      "ec_tags": [
+        "cluttered_bg",
+        "normal_light"
+      ],
+      "frames_count": 968,
+      "duration_sec": 40.33
+    },
+    {
+      "task_id": 95,
+      "video": "dca464df-clip_1784769091190_1784769121086.mp4",
+      "viewpoint": "cam1",
+      "ec_tags": [
+        "cluttered_bg",
+        "fast_blur",
+        "glare_water",
+        "normal_light"
+      ],
+      "frames_count": 717,
+      "duration_sec": 29.87
+    },
+    {
+      "task_id": 96,
+      "video": "a6d52f88-clip_1784769122244_1784769159391.mp4",
+      "viewpoint": "cam1",
+      "ec_tags": [
+        "cluttered_bg",
+        "fast_blur",
+        "glare_water",
+        "normal_light"
+      ],
+      "frames_count": 891,
+      "duration_sec": 37.13
+    },
+    {
+      "task_id": 97,
+      "video": "f3eb1df7-clip_1784769170824_1784769186685.mp4",
+      "viewpoint": "cam1",
+      "ec_tags": [
+        "cluttered_bg",
+        "fast_blur",
+        "normal_light"
+      ],
+      "frames_count": 380,
+      "duration_sec": 15.83
+    },
+    {
+      "task_id": 99,
+      "video": "2360d9de-clip_1784769300041_1784769313771.mp4",
+      "viewpoint": "cam1",
+      "ec_tags": [
+        "cluttered_bg",
+        "similar_distractor"
+      ],
+      "frames_count": 330,
+      "duration_sec": 13.73
+    },
+    {
+      "task_id": 100,
+      "video": "874e4f38-clip_1784769318574_1784769329775.mp4",
+      "viewpoint": "cam1",
+      "ec_tags": [
+        "cluttered_bg",
+        "normal_light"
+      ],
+      "frames_count": 270,
+      "duration_sec": 11.23
+    },
+    {
+      "task_id": 101,
+      "video": "a594e7b2-clip_1784769345769_1784769359051.mp4",
+      "viewpoint": "cam1",
+      "ec_tags": [
+        "cluttered_bg",
+        "fast_blur",
+        "normal_light",
+        "similar_distractor"
+      ],
+      "frames_count": 319,
+      "duration_sec": 13.3
+    },
+    {
+      "task_id": 102,
+      "video": "d28b89e1-clip_1784769369104_1784769379995.mp4",
+      "viewpoint": "cam1",
+      "ec_tags": [
+        "cluttered_bg",
+        "fast_blur"
+      ],
+      "frames_count": 262,
+      "duration_sec": 10.9
+    },
+    {
+      "task_id": 103,
+      "video": "ab248995-clip_1784769380965_1784769392139.mp4",
+      "viewpoint": "cam1",
+      "ec_tags": [
+        "cluttered_bg",
+        "fast_blur",
+        "normal_light"
+      ],
+      "frames_count": 269,
+      "duration_sec": 11.2
+    },
+    {
+      "task_id": 104,
+      "video": "9be79317-clip_1784771172790_1784771193242.mp4",
+      "viewpoint": "cam2",
+      "ec_tags": [
+        "defocus",
+        "normal_light"
+      ],
+      "frames_count": 491,
+      "duration_sec": 20.47
+    },
+    {
+      "task_id": 105,
+      "video": "9fb37327-clip_1784771234167_1784771244262.mp4",
+      "viewpoint": "cam2",
+      "ec_tags": [
+        "cluttered_bg",
+        "dark"
+      ],
+      "frames_count": 242,
+      "duration_sec": 10.1
+    },
+    {
+      "task_id": 106,
+      "video": "8b0a7e69-clip_1784771245670_1784771258155.mp4",
+      "viewpoint": "cam2",
+      "ec_tags": [
+        "dark",
+        "defocus"
+      ],
+      "frames_count": 299,
+      "duration_sec": 12.47
+    },
+    {
+      "task_id": 107,
+      "video": "7089c8c1-clip_1784771306705_1784771321977.mp4",
+      "viewpoint": "cam2",
+      "ec_tags": [
+        "cluttered_bg",
+        "dark",
+        "fast_blur",
+        "glare_water"
+      ],
+      "frames_count": 367,
+      "duration_sec": 15.3
+    },
+    {
+      "task_id": 108,
+      "video": "ec778928-clip_1784771325105_1784771332570.mp4",
+      "viewpoint": "cam2",
+      "ec_tags": [
+        "cluttered_bg",
+        "dark",
+        "fast_blur",
+        "glare_water"
+      ],
+      "frames_count": 178,
+      "duration_sec": 7.43
+    },
+    {
+      "task_id": 109,
+      "video": "1b07ac2e-clip_1784771335315_1784771343016.mp4",
+      "viewpoint": "cam2",
+      "ec_tags": [
+        "normal_light"
+      ],
+      "frames_count": 185,
+      "duration_sec": 7.7
+    },
+    {
+      "task_id": 110,
+      "video": "90f8db1e-clip_1784771412149_1784771419275.mp4",
+      "viewpoint": "cam2",
+      "ec_tags": [
+        "cluttered_bg",
+        "normal_light"
+      ],
+      "frames_count": 170,
+      "duration_sec": 7.1
+    },
+    {
+      "task_id": 111,
+      "video": "aa45b982-clip_1784771450672_1784771462093.mp4",
+      "viewpoint": "cam2",
+      "ec_tags": [
+        "normal_light"
+      ],
+      "frames_count": 274,
+      "duration_sec": 11.4
+    },
+    {
+      "task_id": 112,
+      "video": "86565d00-clip_1784771544831_1784771558746.mp4",
+      "viewpoint": "cam2",
+      "ec_tags": [
+        "fast_blur",
+        "normal_light",
+        "similar_distractor"
+      ],
+      "frames_count": 334,
+      "duration_sec": 13.93
+    },
+    {
+      "task_id": 113,
+      "video": "56f1bab2-clip_1784771566978_1784771577071.mp4",
+      "viewpoint": "cam2",
+      "ec_tags": [
+        "fast_blur",
+        "normal_light"
+      ],
+      "frames_count": 242,
+      "duration_sec": 10.07
+    },
+    {
+      "task_id": 114,
+      "video": "5db9bf78-clip_1784771648897_1784771655426.mp4",
+      "viewpoint": "cam2",
+      "ec_tags": [
+        "fast_blur",
+        "normal_light"
+      ],
+      "frames_count": 157,
+      "duration_sec": 6.53
+    },
+    {
+      "task_id": 115,
+      "video": "a4a2addd-clip_1784771679281_1784771693449.mp4",
+      "viewpoint": "cam2",
+      "ec_tags": [
+        "cluttered_bg",
+        "fast_blur",
+        "normal_light",
+        "similar_distractor"
+      ],
+      "frames_count": 340,
+      "duration_sec": 14.17
+    },
+    {
+      "task_id": 116,
+      "video": "3863c37f-clip_1784771842875_1784771854030.mp4",
+      "viewpoint": "cam2",
+      "ec_tags": [
+        "fast_blur",
+        "normal_light"
+      ],
+      "frames_count": 267,
+      "duration_sec": 11.13
+    },
+    {
+      "task_id": 117,
+      "video": "3c1736b3-clip_1784771919716_1784771930606.mp4",
+      "viewpoint": "cam2",
+      "ec_tags": [
+        "fast_blur",
+        "normal_light"
+      ],
+      "frames_count": 262,
+      "duration_sec": 10.9
+    },
+    {
+      "task_id": 118,
+      "video": "72c36744-clip_1784771445150_1784771461886.mp4",
+      "viewpoint": "cam2",
+      "ec_tags": [
+        "fast_blur",
+        "normal_light"
+      ],
+      "frames_count": 402,
+      "duration_sec": 16.77
+    },
+    {
+      "task_id": 119,
+      "video": "ebd3f551-clip_1784771501960_1784771508334.mp4",
+      "viewpoint": "cam2",
+      "ec_tags": [
+        "normal_light"
+      ],
+      "frames_count": 154,
+      "duration_sec": 6.4
+    },
+    {
+      "task_id": 120,
+      "video": "63e211ae-clip_1784771674638_1784771694827.mp4",
+      "viewpoint": "cam2",
+      "ec_tags": [
+        "fast_blur",
+        "normal_light"
+      ],
+      "frames_count": 485,
+      "duration_sec": 20.2
+    },
+    {
+      "task_id": 121,
+      "video": "09edbbf0-clip_1784771795452_1784771800764.mp4",
+      "viewpoint": "cam2",
+      "ec_tags": [
+        "fast_blur",
+        "normal_light"
+      ],
+      "frames_count": 127,
+      "duration_sec": 5.3
+    },
+    {
+      "task_id": 122,
+      "video": "6e09de7d-clip_1784772845057_1784772855417.mp4",
+      "viewpoint": "cam1",
+      "ec_tags": [
+        "normal_light"
+      ],
+      "frames_count": 249,
+      "duration_sec": 10.37
+    },
+    {
+      "task_id": 123,
+      "video": "836b338e-clip_1784772859809_1784772865454.mp4",
+      "viewpoint": "cam1",
+      "ec_tags": [
+        "normal_light"
+      ],
+      "frames_count": 135,
+      "duration_sec": 5.63
+    },
+    {
+      "task_id": 124,
+      "video": "131f9c41-clip_1784772883279_1784772891779.mp4",
+      "viewpoint": "cam1",
+      "ec_tags": [
+        "normal_light"
+      ],
+      "frames_count": 203,
+      "duration_sec": 8.47
+    },
+    {
+      "task_id": 125,
+      "video": "cf2ef4a9-clip_1784772896560_1784772904005.mp4",
+      "viewpoint": "cam1",
+      "ec_tags": [
+        "normal_light"
+      ],
+      "frames_count": 179,
+      "duration_sec": 7.47
+    },
+    {
+      "task_id": 126,
+      "video": "17470725-clip_1784772920204_1784772949436.mp4",
+      "viewpoint": "cam1",
+      "ec_tags": [
+        "fast_blur",
+        "normal_light"
+      ],
+      "frames_count": 702,
+      "duration_sec": 29.23
+    },
+    {
+      "task_id": 127,
+      "video": "ab639d7a-clip_1784774024008_1784774036758.mp4",
+      "viewpoint": "cam2",
+      "ec_tags": [
+        "normal_light"
+      ],
+      "frames_count": 306,
+      "duration_sec": 12.77
+    },
+    {
+      "task_id": 128,
+      "video": "7650c4d4-clip_1784774131625_1784774138001.mp4",
+      "viewpoint": "cam2",
+      "ec_tags": [
+        "normal_light"
+      ],
+      "frames_count": 154,
+      "duration_sec": 6.4
+    },
+    {
+      "task_id": 129,
+      "video": "88b381e9-clip_1784774169739_1784774179302.mp4",
+      "viewpoint": "cam2",
+      "ec_tags": [
+        "fast_blur",
+        "normal_light"
+      ],
+      "frames_count": 230,
+      "duration_sec": 9.57
+    },
+    {
+      "task_id": 130,
+      "video": "98b73221-clip_1784776020144_1784776030504.mp4",
+      "viewpoint": "cam2",
+      "ec_tags": [
+        "normal_light"
+      ],
+      "frames_count": 248,
+      "duration_sec": 10.33
+    },
+    {
+      "task_id": 131,
+      "video": "01b25dbc-clip_1784776130192_1784776138957.mp4",
+      "viewpoint": "cam2",
+      "ec_tags": [
+        "normal_light"
+      ],
+      "frames_count": 210,
+      "duration_sec": 8.73
+    },
+    {
+      "task_id": 132,
+      "video": "db2083b6-clip_1784776213459_1784776226208.mp4",
+      "viewpoint": "cam2",
+      "ec_tags": [
+        "fast_blur",
+        "normal_light"
+      ],
+      "frames_count": 306,
+      "duration_sec": 12.77
+    },
+    {
+      "task_id": 133,
+      "video": "2b81c415-clip_1784778287258_1784778298150.mp4",
+      "viewpoint": "cam2",
+      "ec_tags": [
+        "normal_light"
+      ],
+      "frames_count": 261,
+      "duration_sec": 10.87
+    }
+  ]
+}
