@@ -4,7 +4,7 @@
 
 ## 0. 环境与数据准备
 
-- [ ] **⚠️ 尽快问助教:自选题是否允许 COCO 预训练权重初始化**(见 [docs/course-requirements.md](docs/course-requirements.md) 红线条目;影响全部实验计划)
+- [x] ~~问助教预训练权重~~ → ✅ 已同意允许 COCO 预训练初始化,按原计划执行
 
 - [ ] 租用 GPU(Colab T4 / AutoDL,本机无 NVIDIA 卡),跑通 ultralytics 环境
 - [ ] 确认 `cleansight-yolo` 数据集完整性(group1 35,090 帧 / group2 24,354 帧)
