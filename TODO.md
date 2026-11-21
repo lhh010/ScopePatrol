@@ -4,6 +4,8 @@
 
 ## 0. 环境与数据准备
 
+- [ ] **⚠️ 尽快问助教:自选题是否允许 COCO 预训练权重初始化**(见 [docs/course-requirements.md](docs/course-requirements.md) 红线条目;影响全部实验计划)
+
 - [ ] 租用 GPU(Colab T4 / AutoDL,本机无 NVIDIA 卡),跑通 ultralytics 环境
 - [ ] 确认 `cleansight-yolo` 数据集完整性(group1 35,090 帧 / group2 24,354 帧)
 - [ ] 编写合并脚本:两组合并为统一 6 类数据集(类别重映射 + 统一 data.yaml),供单模型实验用
@@ -11,7 +13,7 @@
 
 ## 1. Baseline(必做,报告的对照基线)
 
-- [ ] **B0**:单模型 6 类,yolo11s @640(统一数据集)
+- [ ] **B0 主 baseline**:单模型 6 类,yolo11s @640,**ultralytics 全默认超参/默认增强**,不加任何自设计模块;训练预算(epochs/patience)与后续实验严格一致,保证公平
 - [ ] **B1**:双模型分组(曦源现状:group1 + group2 各一套 yolo11s @640)
 - [ ] 汇总两组 baseline 的逐类 AP / AP_small / mAP@0.5 / mAP@0.5:0.95 / FPS / 参数量
 
@@ -46,4 +48,11 @@
 - [ ] 实验记录模板(每次 run 记录配置/指标,自动汇总成表)
 - [ ] 可视化:困难样例(小目标、遮挡、反光)的检测结果对比图
 - [ ] 撰写最终报告:难点 → 设计 → 实验 → 结论
-- [ ] 整理 repo(README 更新进度、清理 runs)
+- [ ] 整理 repo(README 更新进度;runs 按"论文表格编号"命名,不删训练日志)
+
+## 7. 提交物(截止 2027-01-05,elearning)
+
+- [ ] 代码 + checkpoint(权重传外部存储,README 放链接)
+- [ ] 训练日志汇总(runs/*/results.csv + curves,对应论文实验编号)
+- [ ] 课程论文:CVPR2027 双栏,正文 ≤ 8 页,第 14 周前出初稿框架
+- [ ] 确认:test 结果只进最终报告,选型全部用 val(红线)
