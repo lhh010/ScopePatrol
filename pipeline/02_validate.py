@@ -21,7 +21,7 @@ def evaluate(group, thr):
     data = DATASETS / group / "data.yaml"
     weight = RUNS / group / "weights" / "best.pt"
     if not weight.exists():
-        return None, None, None, [f"缺权重 {weight},先跑 03_train.py"]
+        return None, None, None, [f"缺权重 {weight},先跑 01_train.py"]
     if not data.exists():
         return None, None, None, [f"缺 data.yaml {data},请先从 ModelScope 下载 cleansight-yolo 数据集"]
 
@@ -96,7 +96,7 @@ def main():
     else:
         groups = []
     if not groups:
-        raise SystemExit("没有可验证的组(先 03_train.py),或显式传组名。")
+        raise SystemExit("没有可验证的组(先 01_train.py),或显式传组名。")
 
     any_fail = False
     for g in groups:

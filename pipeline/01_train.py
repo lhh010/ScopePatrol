@@ -58,7 +58,7 @@ def main():
     print("\n=== 完成 ===")
     for g, best in results:
         print(f"{g}: {best}")
-    print("下一步:04_validate.py 出验收报告")
+    print("下一步:02_validate.py 出验收报告")
 
 
 if __name__ == "__main__":

@@ -8,8 +8,8 @@
 
 ```
 pipeline/
-  03_train.py       # 各组训练 → runs/<组>/weights/best.pt
-  04_validate.py    # 验证集指标 + 验收 PASS/FAIL → runs/<组>/acceptance_report.md
+  01_train.py       # 各组训练 → runs/<组>/weights/best.pt
+  02_validate.py    # 验证集指标 + 验收 PASS/FAIL → runs/<组>/acceptance_report.md
   config.yaml       # 唯一配置入口:分组 / 超参 / 验收阈值
   requirements.txt
   utils/            # common.py(路径与配置)、stats.py(标签分布统计)
@@ -21,8 +21,8 @@ pipeline/
 ```bash
 cd pipeline
 pip install -r requirements.txt
-python 03_train.py                 # 或只训某组:python 03_train.py group2_small
-python 04_validate.py              # 指标 + 验收报告
+python 01_train.py                 # 或只训某组:python 01_train.py group2_small
+python 02_validate.py              # 指标 + 验收报告
 python -c "from utils import stats; stats.main()"   # 数据分布统计
 ```
 

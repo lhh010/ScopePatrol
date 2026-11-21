@@ -30,8 +30,8 @@ The core challenge is an extreme **scale gap within a single scene** — from ha
 ```bash
 cd pipeline
 pip install -r requirements.txt
-python 03_train.py            # trains each group; weights land in runs/<group>/weights/best.pt
-python 04_validate.py         # metrics + acceptance report
+python 01_train.py            # trains each group; weights land in runs/<group>/weights/best.pt
+python 02_validate.py         # metrics + acceptance report
 ```
 
 ## Status
