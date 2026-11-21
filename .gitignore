@@ -1,0 +1,21 @@
+# Dataset media (download from ModelScope instead; see cleansight-yolo/README.md)
+cleansight-yolo/group*/
+cleansight-yolo/**/*.jpg
+cleansight-yolo/**/*.png
+cleansight-yolo/**/*.mp4
+cleansight-yolo/.ms_upload_cache
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+
+# Training artifacts
+runs/
+datasets/
+*.pt
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.obsidian/
