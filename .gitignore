@@ -1,5 +1,7 @@
 # Dataset media (download from ModelScope instead; see cleansight-yolo/README.md)
 cleansight-yolo/group*/
+# Generated unified dataset (rebuild via pipeline/00_build_unified.py)
+cleansight-yolo/unified_6cls/
 cleansight-yolo/**/*.jpg
 cleansight-yolo/**/*.png
 cleansight-yolo/**/*.mp4
